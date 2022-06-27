@@ -1,0 +1,14 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/cmake/.vs
+/out/build/x64-Debug
+/StaticLibmDNS/x64/Debug/StaticLibmDNS
+/UnitTest_mDNS/x64/Debug/UnitTest_mDNS
+*.vsidx
+/_build/.vs/mdns/v17
+/_build/mdns_example.dir/Debug
+/_build/x64/Debug
+/_build/bin/Debug
