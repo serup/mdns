@@ -232,3 +232,4 @@ codecovreport.json
 /cmake/.vs
 /out/build/x64-Debug
 /_build/.vs/mdns
+*.filters
