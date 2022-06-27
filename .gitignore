@@ -228,3 +228,6 @@ coveralls.json
 coverallsreport.json
 codecov.json
 codecovreport.json
+/out/build/x64-Debug
+/cmake/.vs
+/.vs
