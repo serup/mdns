@@ -86,6 +86,9 @@ and then make it, by running
 
 `cmake -G "<SDK Target>" ..`  
 
+example:
+
+` cmake -G"Visual Studio 16 2019" ..`
 
 ### Linux
 
