@@ -24,6 +24,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mdns_example", "mdns_exampl
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StaticLibmDNS", "..\StaticLibmDNS\StaticLibmDNS.vcxproj", "{578C6FFE-4714-4D8C-B32C-C2F03EBF057B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UnitTest_mDNS", "..\UnitTest_mDNS\UnitTest_mDNS.vcxproj", "{31572E12-EF88-4BA5-A2D0-129C0391C05E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -112,6 +114,22 @@ Global
 		{578C6FFE-4714-4D8C-B32C-C2F03EBF057B}.RelWithDebInfo|x64.Build.0 = Release|x64
 		{578C6FFE-4714-4D8C-B32C-C2F03EBF057B}.RelWithDebInfo|x86.ActiveCfg = Release|Win32
 		{578C6FFE-4714-4D8C-B32C-C2F03EBF057B}.RelWithDebInfo|x86.Build.0 = Release|Win32
+		{31572E12-EF88-4BA5-A2D0-129C0391C05E}.Debug|x64.ActiveCfg = Debug|x64
+		{31572E12-EF88-4BA5-A2D0-129C0391C05E}.Debug|x64.Build.0 = Debug|x64
+		{31572E12-EF88-4BA5-A2D0-129C0391C05E}.Debug|x86.ActiveCfg = Debug|Win32
+		{31572E12-EF88-4BA5-A2D0-129C0391C05E}.Debug|x86.Build.0 = Debug|Win32
+		{31572E12-EF88-4BA5-A2D0-129C0391C05E}.MinSizeRel|x64.ActiveCfg = Debug|x64
+		{31572E12-EF88-4BA5-A2D0-129C0391C05E}.MinSizeRel|x64.Build.0 = Debug|x64
+		{31572E12-EF88-4BA5-A2D0-129C0391C05E}.MinSizeRel|x86.ActiveCfg = Debug|Win32
+		{31572E12-EF88-4BA5-A2D0-129C0391C05E}.MinSizeRel|x86.Build.0 = Debug|Win32
+		{31572E12-EF88-4BA5-A2D0-129C0391C05E}.Release|x64.ActiveCfg = Release|x64
+		{31572E12-EF88-4BA5-A2D0-129C0391C05E}.Release|x64.Build.0 = Release|x64
+		{31572E12-EF88-4BA5-A2D0-129C0391C05E}.Release|x86.ActiveCfg = Release|Win32
+		{31572E12-EF88-4BA5-A2D0-129C0391C05E}.Release|x86.Build.0 = Release|Win32
+		{31572E12-EF88-4BA5-A2D0-129C0391C05E}.RelWithDebInfo|x64.ActiveCfg = Release|x64
+		{31572E12-EF88-4BA5-A2D0-129C0391C05E}.RelWithDebInfo|x64.Build.0 = Release|x64
+		{31572E12-EF88-4BA5-A2D0-129C0391C05E}.RelWithDebInfo|x86.ActiveCfg = Release|Win32
+		{31572E12-EF88-4BA5-A2D0-129C0391C05E}.RelWithDebInfo|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
