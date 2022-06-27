@@ -1,5 +1,7 @@
 # Public domain mDNS/DNS-SD library in C
 
+a fork from https://github.com/mjansson/mdns/fork
+
 This library provides a header only cross-platform mDNS and DNS-DS library in C. The latest source code is always available at
 
 https://github.com/mjansson/mdns
