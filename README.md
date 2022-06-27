@@ -1,5 +1,7 @@
 # Public domain mDNS/DNS-SD library in C
 
+a fork from https://github.com/mjansson/mdns/fork
+
 This library provides a header only cross-platform mDNS and DNS-DS library in C. The latest source code is always available at
 
 https://github.com/mjansson/mdns
@@ -75,6 +77,20 @@ The `mdns.c` file contains a test executable implementation using the library to
 
 #### Microsoft compiler
 `cl mdns.c /Zi /Fdmdns.pdb /link /out:mdns.exe ws2_32.lib iphlpapi.lib`
+
+in order to create visual studio project files, then do following in the cloned folder :
+
+mkdir _build
+
+cd _build
+
+and then make it, by running 
+
+`cmake -G "<SDK Target>" ..`  
+
+example:
+
+` cmake -G"Visual Studio 16 2019" ..`
 
 ### Linux
 
