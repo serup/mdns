@@ -1,0 +1,4 @@
+C:/tmp/GitHub/mdns/_build/CMakeFiles/mdns_example.dir
+C:/tmp/GitHub/mdns/_build/CMakeFiles/INSTALL.dir
+C:/tmp/GitHub/mdns/_build/CMakeFiles/ALL_BUILD.dir
+C:/tmp/GitHub/mdns/_build/CMakeFiles/ZERO_CHECK.dir
