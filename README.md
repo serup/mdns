@@ -76,6 +76,17 @@ The `mdns.c` file contains a test executable implementation using the library to
 #### Microsoft compiler
 `cl mdns.c /Zi /Fdmdns.pdb /link /out:mdns.exe ws2_32.lib iphlpapi.lib`
 
+in order to create visual studio project files, then do following in the cloned folder :
+
+mkdir _build
+
+cd _build
+
+and then make it, by running 
+
+`cmake -G "<SDK Target>" ..`  
+
+
 ### Linux
 
 #### GCC
