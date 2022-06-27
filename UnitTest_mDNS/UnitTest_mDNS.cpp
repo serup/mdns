@@ -1,21 +1,24 @@
 #include "pch.h"
 #include "CppUnitTest.h"
-//#include "..\StaticLibmDNS\mDNSlib.h"
 #include "..\mdns.h"
-
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 #pragma comment(lib, "Ws2_32.lib")  // important winsocket dependencies
 
 
+
+
 namespace UnitTestmDNS
 {
+
 	TEST_CLASS(UnitTestmDNS)
 	{
 	public:
 		
-		TEST_METHOD(Initialize_mDNS_library)
-		{
+		TEST_METHOD(Initialize_mDNS_library){
+			
+			//open_service_sockets(0, 0);
+
 
 			mdns_socket_open_ipv4(0);
 
