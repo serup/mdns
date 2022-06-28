@@ -1988,13 +1988,14 @@ mdns_resp_add_service(const char* hostname, const char* service_name, int servic
 	}
 	printf("Opened %d socket%s for mDNS service\n", num_sockets, num_sockets ? "s" : "");
 	
-	/*
+	
 	size_t service_name_length = strlen(service_name);
 	if (!service_name_length) {
 		printf("Invalid service name\n");
 		return -1;
 	}
 
+	/*
 	char* service_name_buffer = malloc(service_name_length + 2);
 	memcpy(service_name_buffer, service_name, service_name_length);
 	if (service_name_buffer[service_name_length - 1] != '.')

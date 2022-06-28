@@ -109,7 +109,11 @@ namespace UnitTestmDNS
 	        int result = mdns_resp_add_service(hostname, service_name, service_port);
 	        Assert::IsTrue(result == -1, L"FAILED: mdns_resp_add_service call with invalid parameters should return -1, it did NOT ");
 
-
+			std::string strHostname = "localhost";
+	        std::string strService_name = ""; // invalid service name
+	        result = mdns_resp_add_service(strHostname.c_str(), strService_name.c_str(), service_port);
+	        Assert::IsTrue(result == -1, L"FAILED: mdns_resp_add_service call with invalid parameters should return -1, it did NOT ");
+		
 		}
 	};
 }
