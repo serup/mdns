@@ -14,6 +14,7 @@
 
 #pragma once
 
+#include <stdio.h>
 #include <stdint.h>
 #include <stddef.h>
 #include <stdlib.h>
@@ -1995,8 +1996,9 @@ mdns_resp_add_service(const char* hostname, const char* service_name, int servic
 		return -1;
 	}
 
+	
+	char* service_name_buffer = (char*)malloc(service_name_length + 2);
 	/*
-	char* service_name_buffer = malloc(service_name_length + 2);
 	memcpy(service_name_buffer, service_name, service_name_length);
 	if (service_name_buffer[service_name_length - 1] != '.')
 		service_name_buffer[service_name_length++] = '.';
@@ -2006,6 +2008,7 @@ mdns_resp_add_service(const char* hostname, const char* service_name, int servic
 	printf("Service mDNS: %s:%d\n", service_name, service_port);
 	printf("Hostname: %s\n", hostname);
 
+	/*
 	size_t capacity = 2048;
 	void* buffer = malloc(capacity);
 
@@ -2018,7 +2021,8 @@ mdns_resp_add_service(const char* hostname, const char* service_name, int servic
 	         MDNS_STRING_FORMAT(hostname_string), MDNS_STRING_FORMAT(service_string));
 	mdns_string_t service_instance_string =
 	    (mdns_string_t){service_instance_buffer, strlen(service_instance_buffer)};
-
+	
+	
 	// Build the "<hostname>.local." string
 	char qualified_hostname_buffer[256] = {0};
 	snprintf(qualified_hostname_buffer, sizeof(qualified_hostname_buffer) - 1, "%.*s.local.",
