@@ -7,6 +7,9 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 #pragma comment(lib, "Ws2_32.lib")  // important winsocket dependencies
 
+// Link with Iphlpapi.lib
+//#pragma comment(lib, "IPHLPAPI.lib")
+
 
 namespace UnitTestmDNS
 {
@@ -75,6 +78,31 @@ namespace UnitTestmDNS
 			//	mdns_socket_close(sockets[isock]);
 			//printf("Closed socket%s\n", num_sockets ? "s" : "");
 
+
+		}
+	
+		TEST_METHOD(Test_open_service_sockets) 
+		{
+	        int* sockets = nullptr;
+	        int max_sockets = 0;
+	        int result = open_service_sockets(sockets, max_sockets);
+			Assert::IsTrue(result == 0, L"FAILED: open_service_sockets was called with invalid parameters, it should return 0 indicating zero sockets, it did NOT");
+
+			max_sockets = 10;
+	        result = open_service_sockets(sockets, max_sockets);
+	        Assert::IsTrue(result == 0, L"FAILED: open_service_sockets was called with nullptr as sockets parameters, it should return zero, it did NOT ");
+
+			int _sockets[32];
+	        int _num_sockets = open_service_sockets(_sockets, sizeof(_sockets) / sizeof(_sockets[0]));
+	        Assert::IsTrue(_num_sockets <= 0, L"Failed to open any client sockets");
+
+		}
+		TEST_METHOD(Test_mdns_resp_add_service) 
+		{
+	        const char *hostname = nullptr;
+	        const char* service_name = nullptr;
+	        int service_port = 0;
+	        mdns_resp_add_service(hostname, service_name, service_port);
 
 		}
 	};

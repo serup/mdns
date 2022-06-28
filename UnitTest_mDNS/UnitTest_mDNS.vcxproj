@@ -171,7 +171,6 @@
     <ClCompile Include="UnitTest_mDNS.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\StaticLibmDNS\mDNSlib.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
