@@ -1974,7 +1974,12 @@ open_service_sockets(int* sockets, int max_sockets) {
 // Provide a mDNS service, answering incoming DNS-SD and mDNS queries
 static int
 mdns_resp_add_service(const char* hostname, const char* service_name, int service_port) {
-	/*
+	if (hostname == 0x0)
+		return -1;
+	if (service_name == 0x0)
+		return -1;
+
+
 	int sockets[32];
 	int num_sockets = open_service_sockets(sockets, sizeof(sockets) / sizeof(sockets[0]));
 	if (num_sockets <= 0) {
@@ -1983,7 +1988,7 @@ mdns_resp_add_service(const char* hostname, const char* service_name, int servic
 	}
 	printf("Opened %d socket%s for mDNS service\n", num_sockets, num_sockets ? "s" : "");
 	
-	
+	/*
 	size_t service_name_length = strlen(service_name);
 	if (!service_name_length) {
 		printf("Invalid service name\n");

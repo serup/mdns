@@ -94,7 +94,11 @@ namespace UnitTestmDNS
 
 			int _sockets[32];
 	        int _num_sockets = open_service_sockets(_sockets, sizeof(_sockets) / sizeof(_sockets[0]));
-	        Assert::IsTrue(_num_sockets <= 0, L"Failed to open any client sockets");
+	        Assert::IsTrue(_num_sockets > 0, L"Failed to open any client sockets");
+
+			// cleanup
+			for (int isock = 0; isock < _num_sockets; ++isock)
+		        mdns_socket_close(_sockets[isock]);
 
 		}
 		TEST_METHOD(Test_mdns_resp_add_service) 
@@ -102,7 +106,9 @@ namespace UnitTestmDNS
 	        const char *hostname = nullptr;
 	        const char* service_name = nullptr;
 	        int service_port = 0;
-	        mdns_resp_add_service(hostname, service_name, service_port);
+	        int result = mdns_resp_add_service(hostname, service_name, service_port);
+	        Assert::IsTrue(result == -1, L"FAILED: mdns_resp_add_service call with invalid parameters should return -1, it did NOT ");
+
 
 		}
 	};
